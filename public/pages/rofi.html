@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="../css/output.css" />
 </head>
 
 <body bgcolor="EDF1FC">
@@ -118,27 +118,27 @@
                 <h2 class=" text-[16px] font-bold pt-2 text-white ">Jalur 1</h2>
                 <h2 class=" text-[16px] font-bold pt-2 text-white">24-07-2023 <span class="font-normal">s/d</span>
                     07-10-2023</h2>
+                <div class="pt-4">
                     <div class="pt-4">
-                        <div class="pt-4">
-                            <div class=" mx-5 flex items-center text-blue-700 justify-center bg-white rounded-[25px]">
-                                <button class="text-[16px] font-bold text-blue-700" onclick="confirmAction()">Pilih</button>
-                            </div>
+                        <div class=" mx-5 flex items-center text-blue-700 justify-center bg-white rounded-[25px]">
+                            <button class="text-[16px] font-bold text-blue-700" onclick="confirmAction()">Pilih</button>
                         </div>
-                    </div>      
+                    </div>
+                </div>
             </div>
         </div>
         <br>
-        <div class="w-[40px] mx-5 bg-center bg-blue-700 rounded-[25px]">
+        <div class="pl-[40px] w-[40px] mx-5 bg-center bg-blue-700 rounded-[25px]">
             <!-- Jalur 1 -->
             <div class="p-4">
                 <h2 class=" text-[16px] font-bold pt-2 text-white ">Jalur 2</h2>
                 <h2 class=" text-[16px] font-bold pt-2 text-white">10-10-2023 <span class="font-normal">s/d</span>
                     10-12-2023</h2>
-                    <div class="pt-4">
-                        <div class=" mx-5 flex items-center text-blue-700 justify-center bg-white rounded-[25px]">
-                            <button class="text-[16px] font-bold text-blue-700">Belum Dibuka</button>
-                        </div>
-                    </div>      
+                <div class="pt-4">
+                    <div class=" mx-5 flex items-center text-blue-700 justify-center bg-white rounded-[25px]">
+                        <button class="text-[16px] font-bold text-blue-700">Belum Dibuka</button>
+                    </div>
+                </div>
             </div>
         </div>
         <br>
@@ -147,10 +147,10 @@
                 <button class="text-[16px] font-bold text-blue-700" onclick="showFlowbiteAlert()">Belum Dibuka</button>
             </div>
         </div>
-    
+
         <!-- Load Flowbite JavaScript -->
         <script src="path/to/flowbite.min.js"></script>
-    
+
         <script>
             function showFlowbiteAlert() {
                 // Menampilkan alert dari Flowbite
@@ -159,16 +159,16 @@
                     message: 'Apakah Anda yakin?', // Pesan yang akan ditampilkan
                     confirmButtonText: 'Iya', // Teks tombol konfirmasi
                     cancelButtonText: 'Tidak', // Teks tombol batal
-                    onConfirm: function() { // Fungsi yang akan dijalankan saat tombol konfirmasi ditekan
+                    onConfirm: function () { // Fungsi yang akan dijalankan saat tombol konfirmasi ditekan
                         alert('Anda memilih "Iya"');
                     },
-                    onCancel: function() { // Fungsi yang akan dijalankan saat tombol batal ditekan
+                    onCancel: function () { // Fungsi yang akan dijalankan saat tombol batal ditekan
                         alert('Anda memilih "Tidak"');
                     }
                 });
             }
         </script>
-        
+
         <!-- <script>
             function confirmAction() {
                 // Membuat pesan konfirmasi
