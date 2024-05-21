@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      class="max-h-[360px] h-[360px] rounded-b-[45px] bg-gradient-to-b from-[#0B65FF] to-[#5C97FF]"
+    >
+      <div class="pt-5 flex text-white">
+        <img class="ml-5" src="/img/1.png" alt="data" />
+        <p1 class="text-[20px] pl-[7px] font-bold">PPDB</p1>
+        <p1 class="text-[20px] pl-[5px] font-medium">APPS</p1>
+      </div>
+      <div class="ml-[20px] mt-[28px]">
+        <p2 class="text-[16px] font-medium text-white">Identitas</p2>
+        <p2 class="text-[16px] font-normal text-blue-50"
+          >/Informasi data pendaftar</p2
+        >
+      </div>
+      <div class="pt-[36px]">
+        <button
+          id="dropdownDelayButton"
+          data-dropdown-toggle="dropdownDelay"
+          data-dropdown-delay="500"
+          data-dropdown-trigger="hover"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          type="button"
+        >
+          Dropdown hover
+          <svg
+            class="w-2.5 h-2.5 ms-3"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 1 4 4 4-4"
+            />
+          </svg>
+        </button>
+
+        <!-- Dropdown menu -->
+        <div
+          id="dropdownDelay"
+          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+        >
+          <ul
+            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+            aria-labelledby="dropdownDelayButton"
+          >
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Dashboard</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Settings</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Earnings</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Sign out</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("dropdownDefaultButton")
+        .addEventListener("click", function () {
+          var dropdown = document.getElementById("dropdown");
+          dropdown.classList.toggle("hidden");
+        });
+    </script>
+  </body>
+</html>
