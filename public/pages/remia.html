@@ -1,9 +1,743 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ["Inter"],
+          },
+        },
+      },
+    };
+  </script>
+  <title>input data diri</title>
+</head>
+
+<body bgcolor="EDF1FC">
+  <div class="rounded-b-[45px] bg-gradient-to-b from-[#0B65FF] to-[#5C97FF] pb-8">
+    <div class="pt-5 flex text-white">
+      <img class="ml-5" src="/public/img/1.png" alt="data" />
+      <p1 class="text-[20px] pl-[7px] font-bold">PPDB</p1>
+      <p1 class="text-[20px] pl-[5px] font-medium">APPS</p1>
+    </div>
+    <div class="ml-[20px] mt-[28px]">
+      <p2 class="text-[16px] font-medium text-white">Dashboard</p2>
+      <p2 class="text-[16px] font-normal text-blue-50">/Informasi data pendaftar</p2>
+    </div>
+
+    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+      class="text-white mt-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
+      type="button">
+      <svg class="me-2" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 8.5L3.5 11L6 8.5M1 3.5L3.5 1L6 3.5" stroke="white" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+
+      Menu Utama
+    </button>
+
+    <!-- Dropdown menu -->
+    <div id="dropdown" class="z-10 hidden rounded-lg ml-5">
+      <ul class="text-sm text-white" aria-labelledby="dropdownDefaultButton">
+        <li>
+          <a href="" class="flex py-1">
+            <svg class="mt-1 me-1" width="10" height="10" viewBox="0 0 10 10" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.375 10H0.625C0.279825 10 0 9.75912 0 9.46197V4.30441C0 4.16172 0.0659064 4.0249 0.183125 3.92402L4.55812 0.157794C4.67537 0.0567676 4.83444 0 5.00031 0C5.16619 0 5.32525 0.0567676 5.4425 0.157794L9.8175 3.92402C9.93481 4.02479 10.0006 4.16172 10 4.30441V9.46197C10 9.75912 9.72018 10 9.375 10ZM3.75 6.23378H6.25V8.92394H8.75V4.52715L5 1.29896L1.25 4.52715V8.92394H3.75V6.23378Z"
+                fill="white" />
+            </svg>
+            <label class="hover:bg-gray-100">Dashboard</label>
+          </a>
+        </li>
+        <li>
+          <a href="" class="flex py-1">
+            <svg class="mt-1 me-1" width="10" height="10" viewBox="0 0 10 10" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_301_2771)">
+                <path
+                  d="M0.356934 5C0.356934 6.23137 0.84609 7.4123 1.7168 8.283C2.5875 9.15371 3.76843 9.64286 4.99979 9.64286C6.23115 9.64286 7.41208 9.15371 8.28279 8.283C9.15349 7.4123 9.64265 6.23137 9.64265 5C9.64265 3.76864 9.15349 2.58771 8.28279 1.71701C7.41208 0.846304 6.23115 0.357147 4.99979 0.357147C3.76843 0.357147 2.5875 0.846304 1.7168 1.71701C0.84609 2.58771 0.356934 3.76864 0.356934 5Z"
+                  stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M3.90479 2.90928C3.90479 3.05223 3.93294 3.19379 3.98765 3.32586C4.04235 3.45793 4.12254 3.57793 4.22362 3.67902C4.3247 3.7801 4.44471 3.86028 4.57678 3.91499C4.70885 3.9697 4.8504 3.99785 4.99336 3.99785C5.13631 3.99785 5.27786 3.9697 5.40993 3.91499C5.54201 3.86028 5.66201 3.7801 5.76309 3.67902C5.86418 3.57793 5.94436 3.45793 5.99907 3.32586C6.05377 3.19379 6.08193 3.05223 6.08193 2.90928C6.08193 2.76633 6.05377 2.62477 5.99907 2.4927C5.94436 2.36063 5.86418 2.24063 5.76309 2.13954C5.66201 2.03846 5.54201 1.95828 5.40993 1.90357C5.27786 1.84887 5.13631 1.82071 4.99336 1.82071C4.8504 1.82071 4.70885 1.84887 4.57678 1.90357C4.44471 1.95828 4.3247 2.03846 4.22362 2.13954C4.12254 2.24063 4.04235 2.36063 3.98765 2.4927C3.93294 2.62477 3.90479 2.76633 3.90479 2.90928Z"
+                  stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M5.92921 6.32122L5.69689 8.17979H4.30272L4.0704 6.32122H3.60586C3.47756 6.32122 3.37354 6.21721 3.37354 6.0889V5.62424C3.37354 4.72608 4.10159 3.99799 4.99975 3.99799C5.89791 3.99799 6.62607 4.72608 6.62607 5.62424V6.0889C6.62607 6.21721 6.52206 6.32122 6.39375 6.32122H5.92921Z"
+                  stroke="white" stroke-width="1.14286" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+              <defs>
+                <clipPath id="clip0_301_2771">
+                  <rect width="10" height="10" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <label class="hover:bg-gray-100">Data identitas</label>
+          </a>
+        </li>
+        <li>
+          <a href="" class="flex py-1">
+            <svg class="mt-1 me-1" width="10" height="11" viewBox="0 0 10 11" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5 10.909C6.32608 10.909 7.59785 10.372 8.53553 9.41604C9.47322 8.4601 10 7.16355 10 5.81164C10 4.45972 9.47322 3.16318 8.53553 2.20723C7.59785 1.25128 6.32608 0.714233 5 0.714233C3.67392 0.714233 2.40215 1.25128 1.46447 2.20723C0.526784 3.16318 0 4.45972 0 5.81164C0 7.16355 0.526784 8.4601 1.46447 9.41604C2.40215 10.372 3.67392 10.909 5 10.909ZM3.92857 7.54111C3.86995 7.54111 3.81189 7.55288 3.75773 7.57576C3.70357 7.59863 3.65435 7.63215 3.6129 7.67442C3.57144 7.71668 3.53856 7.76685 3.51613 7.82207C3.49369 7.87729 3.48214 7.93647 3.48214 7.99624C3.48214 8.05601 3.49369 8.11519 3.51613 8.17041C3.53856 8.22562 3.57144 8.2758 3.6129 8.31806C3.65435 8.36032 3.70357 8.39385 3.75773 8.41672C3.81189 8.43959 3.86995 8.45136 3.92857 8.45136H6.07143C6.13005 8.45136 6.18811 8.43959 6.24227 8.41672C6.29643 8.39385 6.34565 8.36032 6.3871 8.31806C6.42856 8.2758 6.46144 8.22562 6.48387 8.17041C6.50631 8.11519 6.51786 8.05601 6.51786 7.99624C6.51786 7.93647 6.50631 7.87729 6.48387 7.82207C6.46144 7.76685 6.42856 7.71668 6.3871 7.67442C6.34565 7.63215 6.29643 7.59863 6.24227 7.57576C6.18811 7.55288 6.13005 7.54111 6.07143 7.54111H5.44643V5.44754C5.44643 5.32683 5.39939 5.21107 5.31567 5.12571C5.23195 5.04036 5.1184 4.99241 5 4.99241H4.28571C4.16731 4.99241 4.05376 5.04036 3.97004 5.12571C3.88632 5.21107 3.83929 5.32683 3.83929 5.44754C3.83929 5.56824 3.88632 5.68401 3.97004 5.76936C4.05376 5.85471 4.16731 5.90266 4.28571 5.90266H4.55357V7.54111H3.92857ZM5.71429 3.62703C5.71429 3.82017 5.63903 4.00539 5.50508 4.14195C5.37112 4.27851 5.18944 4.35524 5 4.35524C4.81056 4.35524 4.62888 4.27851 4.49492 4.14195C4.36097 4.00539 4.28571 3.82017 4.28571 3.62703C4.28571 3.4339 4.36097 3.24868 4.49492 3.11212C4.62888 2.97556 4.81056 2.89883 5 2.89883C5.18944 2.89883 5.37112 2.97556 5.50508 3.11212C5.63903 3.24868 5.71429 3.4339 5.71429 3.62703Z"
+                fill="white" />
+            </svg>
+
+            <label class="hover:bg-gray-100">Pengumuman</label>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-h-[500px] w-[320px] shadow shadow-[#E0E3EB] mx-5 bg-white rounded-[25px]">
+    <h1 class="text-[16px] font-semibold pt-[20px] pl-5">Ungah Foto</h1>
+    <h5 class="text-[12px] pl-[20px] pt-[18px]">
+      Silahkan mengunggah foto terbaru anda <br />
+      dengan ketentuan memakai seragam SMP, <br />
+      rapi, dan tampak wajah jelas.
+    </h5>
+    <img class="pl-[43px] pt-[18px]" src="/public/img/foto.png" alt="none profile" />
+    <div class="flex items-center pt-2 pb-7 justify-center w-full">
+      <label for="dropzone-file"
+        class="flex flex-col items-center justify-center w-[233px] h-[104px] border-2 border-[#BFC1C8] border-dashed rounded-lg cursor-pointer bg-[#EDF1FC] hover:bg-[#cfd3de]">
+        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+          <svg class="w-8 h-8 text-[#51A8FF]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 20 16">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+          </svg>
+          <p class="text-sm text-[#51A8FF]">
+            <span class="font-semibold">Click to upload</span> or drag and
+            drop
+          </p>
+          <p class="text-xs text-[#51A8FF] text-center">
+            Pastikan Format File JPG/PNG,<br />Maksimal 1MB
+          </p>
+        </div>
+        <input id="dropzone-file" type="file" class="hidden" />
+      </label>
+    </div>
+  </div>
+  <div class="w-[320px] bg-white rounded-[25px] shadow shadow-[#E0E3EB] mx-5 mt-7">
+    <h1 class="text-[16px] font-semibold pt-5 pl-[21px]">Identitas Diri</h1>
+    <h5 class="text-[12px] pl-[21px] pt-[18px]">
+      Silahkan melengkapi data profil kalian sesuai <br />
+      dengan form yang disediakan. Jika terdapat <br />
+      tanda bintang <span class="text-[#FF5619]">(*)</span>, maka wajib diisi.
+    </h5>
+    <div>
+      <h1 class="text-[10px] font-bold pt-[22px] pl-[21px]">DATA DIRI</h1>
+      <div class="h-[1px] w-[280px] ml bg-[#A5A1A1] opacity-25 ml-[20px] mt-[6px]"></div>
+      <form class="max-w-sm mx-auto mt-[20px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">NISN <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16 12C16 11.4696 16.2107 10.9609 16.5858 10.5858C16.9609 10.2107 17.4696 10 18 10C18.5304 10 19.0391 10.2107 19.4142 10.5858C19.7893 10.9609 20 11.4696 20 12C20 12.5304 19.7893 13.0391 19.4142 13.4142C19.0391 13.7893 18.5304 14 18 14C17.4696 14 16.9609 13.7893 16.5858 13.4142C16.2107 13.0391 16 12.5304 16 12ZM10 12C10 11.4696 10.2107 10.9609 10.5858 10.5858C10.9609 10.2107 11.4696 10 12 10C12.5304 10 13.0391 10.2107 13.4142 10.5858C13.7893 10.9609 14 11.4696 14 12C14 12.5304 13.7893 13.0391 13.4142 13.4142C13.0391 13.7893 12.5304 14 12 14C11.4696 14 10.9609 13.7893 10.5858 13.4142C10.2107 13.0391 10 12.5304 10 12ZM4 12C4 11.4696 4.21071 10.9609 4.58579 10.5858C4.96086 10.2107 5.46957 10 6 10C6.53043 10 7.03914 10.2107 7.41421 10.5858C7.78929 10.9609 8 11.4696 8 12C8 12.5304 7.78929 13.0391 7.41421 13.4142C7.03914 13.7893 6.53043 14 6 14C5.46957 14 4.96086 13.7893 4.58579 13.4142C4.21071 13.0391 4 12.5304 4 12Z"
+                fill="black" />
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="NISN" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">NO.KK <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_302_2892)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.786621 3.87772C0.786621 3.57462 0.907029 3.28393 1.12136 3.0696C1.33568 2.85527 1.62637 2.73486 1.92948 2.73486H15.6438C15.9469 2.73486 16.2376 2.85527 16.4519 3.0696C16.6662 3.28393 16.7866 3.57462 16.7866 3.87772V13.0206C16.7866 13.3237 16.6662 13.6144 16.4519 13.8287C16.2376 14.043 15.9469 14.1634 15.6438 14.1634H1.92948C1.62637 14.1634 1.33568 14.043 1.12136 13.8287C0.907029 13.6144 0.786621 13.3237 0.786621 13.0206V3.87772ZM7.64376 6.73486C7.64376 7.18952 7.46315 7.62556 7.14166 7.94705C6.82017 8.26854 6.38414 8.44915 5.92948 8.44915C5.47482 8.44915 5.03879 8.26854 4.7173 7.94705C4.3958 7.62556 4.21519 7.18952 4.21519 6.73486C4.21519 6.28021 4.3958 5.84417 4.7173 5.52268C5.03879 5.20119 5.47482 5.02058 5.92948 5.02058C6.38414 5.02058 6.82017 5.20119 7.14166 5.52268C7.46315 5.84417 7.64376 6.28021 7.64376 6.73486ZM2.55462 11.08C2.98251 10.6106 3.50373 10.2358 4.08489 9.97956C4.66605 9.72333 5.29434 9.59132 5.92948 9.59201C6.56462 9.59132 7.1929 9.72333 7.77407 9.97956C8.35523 10.2358 8.87645 10.6106 9.30434 11.08C9.60148 11.4046 9.33862 11.8777 8.89862 11.8777H2.96034C2.52034 11.8777 2.25748 11.4046 2.55462 11.08ZM10.9295 6.73486C10.9295 6.34058 11.2495 6.02058 11.6438 6.02058H13.9295C14.1189 6.02058 14.3006 6.09583 14.4346 6.22979C14.5685 6.36374 14.6438 6.54542 14.6438 6.73486C14.6438 6.9243 14.5685 7.10599 14.4346 7.23994C14.3006 7.37389 14.1189 7.44915 13.9295 7.44915H11.6438C11.4543 7.44915 11.2726 7.37389 11.1387 7.23994C11.0047 7.10599 10.9295 6.9243 10.9295 6.73486ZM11.6438 9.44915C11.4543 9.44915 11.2726 9.5244 11.1387 9.65836C11.0047 9.79231 10.9295 9.97399 10.9295 10.1634C10.9295 10.3529 11.0047 10.5346 11.1387 10.6685C11.2726 10.8025 11.4543 10.8777 11.6438 10.8777H13.9295C14.1189 10.8777 14.3006 10.8025 14.4346 10.6685C14.5685 10.5346 14.6438 10.3529 14.6438 10.1634C14.6438 9.97399 14.5685 9.79231 14.4346 9.65836C14.3006 9.5244 14.1189 9.44915 13.9295 9.44915H11.6438Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_302_2892">
+                  <rect width="16" height="16" fill="white" transform="translate(0.786621 0.449097)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="NO.KK" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Nama lengkap <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17.8989 9.03125L19.2833 10.5294L12.8259 17.5312L9.39444 13.8125L10.7789 12.3144L12.8259 14.5244L17.8989 9.03125ZM6.92222 13.8125L9.88889 17H0V14.875C0 12.5269 3.54022 10.625 7.91111 10.625L9.78011 10.7419L6.92222 13.8125ZM7.91111 0C8.96019 0 9.9663 0.447766 10.7081 1.2448C11.4499 2.04183 11.8667 3.12283 11.8667 4.25C11.8667 5.37717 11.4499 6.45817 10.7081 7.2552C9.9663 8.05223 8.96019 8.5 7.91111 8.5C6.86203 8.5 5.85592 8.05223 5.11411 7.2552C4.3723 6.45817 3.95556 5.37717 3.95556 4.25C3.95556 3.12283 4.3723 2.04183 5.11411 1.2448C5.85592 0.447766 6.86203 0 7.91111 0Z"
+                fill="#101010" />
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="Nama lengkap" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Panggilan <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17.8989 9.03125L19.2833 10.5294L12.8259 17.5312L9.39444 13.8125L10.7789 12.3144L12.8259 14.5244L17.8989 9.03125ZM6.92222 13.8125L9.88889 17H0V14.875C0 12.5269 3.54022 10.625 7.91111 10.625L9.78011 10.7419L6.92222 13.8125ZM7.91111 0C8.96019 0 9.9663 0.447766 10.7081 1.2448C11.4499 2.04183 11.8667 3.12283 11.8667 4.25C11.8667 5.37717 11.4499 6.45817 10.7081 7.2552C9.9663 8.05223 8.96019 8.5 7.91111 8.5C6.86203 8.5 5.85592 8.05223 5.11411 7.2552C4.3723 6.45817 3.95556 5.37717 3.95556 4.25C3.95556 3.12283 4.3723 2.04183 5.11411 1.2448C5.85592 0.447766 6.86203 0 7.91111 0Z"
+                fill="#101010" />
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="Nama Panggilan" />
+        </div>
+      </form>
+      <div class="pt-2">
+        <label for="gender" class="block mb-2 text-sm ml-5 font-medium">Jenis Kelamin <span
+            class="text-[#FF5619]">*</span></label>
+        <select id="gender"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm ml-5 rounded-full focus:ring-blue-500 focus:border-blue-500 block w-[282px] p-2.5">
+          <option value="" selected>Pilih Jenis Kelamin</option>
+          <option value="laki-laki">Laki-laki</option>
+          <option value="perempuan">Perempuan</option>
+        </select>
+      </div>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Tempat Lahir <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_302_2933)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.5392 0.753129C11.7464 -0.184014 13.0896 -0.189729 13.3048 0.745129L13.3141 0.788557L13.3336 0.871986C13.4494 1.36209 13.7077 1.80758 14.0765 2.15303C14.4453 2.49847 14.9083 2.72862 15.4078 2.81484C16.393 2.98399 16.393 4.38856 15.4078 4.55884C14.9057 4.64551 14.4406 4.87758 14.0709 5.2259C13.7013 5.57422 13.4436 6.02325 13.3302 6.51656L13.3048 6.62741C13.0896 7.56227 11.7464 7.55656 11.5392 6.61941L11.5185 6.52456C11.4093 6.02936 11.1541 5.57768 10.7852 5.22716C10.4164 4.87664 9.9508 4.64318 9.44778 4.55656C8.46481 4.38741 8.46481 2.98513 9.44778 2.81599C9.94917 2.72959 10.4134 2.49729 10.7817 2.14855C11.1499 1.7998 11.4056 1.35033 11.5162 0.857129L11.5311 0.788557L11.5392 0.751986V0.753129ZM9.25095 5.68913C7.35177 5.36113 7.04675 3.03427 8.33819 2.06627C7.42269 1.71636 6.43515 1.59302 5.46089 1.70689C4.48662 1.82077 3.55493 2.16844 2.74629 2.71988C1.93764 3.27131 1.27637 4.00993 0.819584 4.87193C0.362799 5.73393 0.124239 6.69338 0.124512 7.66741C0.124512 9.71084 1.22143 11.7646 2.44612 13.2754C3.00594 13.976 3.64861 14.6072 4.36027 15.1554C4.67219 15.3874 4.98182 15.5817 5.27303 15.7188C5.55733 15.8526 5.86695 15.9531 6.16737 15.9531C6.46894 15.9531 6.77856 15.8526 7.06286 15.7188C7.35407 15.5817 7.6637 15.3874 7.97447 15.1554C8.68678 14.6076 9.32987 13.9763 9.88977 13.2754C10.9568 11.9588 11.9259 10.232 12.1573 8.45827C11.7328 8.41275 11.3341 8.23356 11.0195 7.94691C10.7049 7.66026 10.4909 7.28118 10.4089 6.86513L10.3882 6.77027C10.3281 6.49833 10.1879 6.2503 9.98536 6.05776C9.78284 5.86522 9.52718 5.7369 9.25095 5.68913ZM6.16737 9.66627C6.70159 9.66627 7.21393 9.45556 7.59168 9.08049C7.96944 8.70541 8.18165 8.1967 8.18165 7.66627C8.18165 7.13584 7.96944 6.62713 7.59168 6.25206C7.21393 5.87699 6.70159 5.66627 6.16737 5.66627C5.63315 5.66627 5.12081 5.87699 4.74305 6.25206C4.3653 6.62713 4.15308 7.13584 4.15308 7.66627C4.15308 8.1967 4.3653 8.70541 4.74305 9.08049C5.12081 9.45556 5.63315 9.66627 6.16737 9.66627Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_302_2933">
+                  <rect x="0.0786133" width="16.1143" height="16" rx="8" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="Tempat Lahir" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Tanggal Lahir <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_302_2944)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.25821 1.14286C5.25821 0.839753 5.13694 0.549062 4.92108 0.334735C4.70522 0.120408 4.41245 0 4.10718 0C3.80192 0 3.50915 0.120408 3.29329 0.334735C3.07743 0.549062 2.95616 0.839753 2.95616 1.14286V2.28571H1.80514C1.34724 2.28571 0.90809 2.46633 0.584302 2.78782C0.260515 3.10931 0.0786133 3.54534 0.0786133 4L0.0786133 5.71429H16.1929V4C16.1929 3.54534 16.011 3.10931 15.6872 2.78782C15.3634 2.46633 14.9243 2.28571 14.4664 2.28571H13.3153V1.14286C13.3153 0.839753 13.1941 0.549062 12.9782 0.334735C12.7624 0.120408 12.4696 0 12.1643 0C11.8591 0 11.5663 0.120408 11.3504 0.334735C11.1346 0.549062 11.0133 0.839753 11.0133 1.14286V2.28571H5.25821V1.14286ZM16.1929 7.14286H0.0786133V14.2857C0.0786133 14.7404 0.260515 15.1764 0.584302 15.4979C0.90809 15.8194 1.34724 16 1.80514 16H14.4664C14.9243 16 15.3634 15.8194 15.6872 15.4979C16.011 15.1764 16.1929 14.7404 16.1929 14.2857V7.14286Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_302_2944">
+                  <rect x="0.0786133" width="16.1143" height="16" rx="8" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="Tanggal Lahir" />
+        </div>
+      </form>
+      <div class="pt-2">
+        <label for="gender" class="block mb-2 text-sm ml-5 font-medium">Agama <span
+            class="text-[#FF5619]">*</span></label>
+        <select id="gender"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm ml-5 rounded-full focus:ring-blue-500 focus:border-blue-500 block w-[282px] p-2.5">
+          <option value="" selected>--Pilih--</option>
+          <option value="laki-laki">Islam</option>
+          <option value="perempuan">Kristen</option>
+          <option value="perempuan">Hindu</option>
+          <option value="perempuan">Buda</option>
+          <option value="perempuan">Konghucu</option>
+        </select>
+      </div>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Alamat <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_302_2933)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.5392 0.753129C11.7464 -0.184014 13.0896 -0.189729 13.3048 0.745129L13.3141 0.788557L13.3336 0.871986C13.4494 1.36209 13.7077 1.80758 14.0765 2.15303C14.4453 2.49847 14.9083 2.72862 15.4078 2.81484C16.393 2.98399 16.393 4.38856 15.4078 4.55884C14.9057 4.64551 14.4406 4.87758 14.0709 5.2259C13.7013 5.57422 13.4436 6.02325 13.3302 6.51656L13.3048 6.62741C13.0896 7.56227 11.7464 7.55656 11.5392 6.61941L11.5185 6.52456C11.4093 6.02936 11.1541 5.57768 10.7852 5.22716C10.4164 4.87664 9.9508 4.64318 9.44778 4.55656C8.46481 4.38741 8.46481 2.98513 9.44778 2.81599C9.94917 2.72959 10.4134 2.49729 10.7817 2.14855C11.1499 1.7998 11.4056 1.35033 11.5162 0.857129L11.5311 0.788557L11.5392 0.751986V0.753129ZM9.25095 5.68913C7.35177 5.36113 7.04675 3.03427 8.33819 2.06627C7.42269 1.71636 6.43515 1.59302 5.46089 1.70689C4.48662 1.82077 3.55493 2.16844 2.74629 2.71988C1.93764 3.27131 1.27637 4.00993 0.819584 4.87193C0.362799 5.73393 0.124239 6.69338 0.124512 7.66741C0.124512 9.71084 1.22143 11.7646 2.44612 13.2754C3.00594 13.976 3.64861 14.6072 4.36027 15.1554C4.67219 15.3874 4.98182 15.5817 5.27303 15.7188C5.55733 15.8526 5.86695 15.9531 6.16737 15.9531C6.46894 15.9531 6.77856 15.8526 7.06286 15.7188C7.35407 15.5817 7.6637 15.3874 7.97447 15.1554C8.68678 14.6076 9.32987 13.9763 9.88977 13.2754C10.9568 11.9588 11.9259 10.232 12.1573 8.45827C11.7328 8.41275 11.3341 8.23356 11.0195 7.94691C10.7049 7.66026 10.4909 7.28118 10.4089 6.86513L10.3882 6.77027C10.3281 6.49833 10.1879 6.2503 9.98536 6.05776C9.78284 5.86522 9.52718 5.7369 9.25095 5.68913ZM6.16737 9.66627C6.70159 9.66627 7.21393 9.45556 7.59168 9.08049C7.96944 8.70541 8.18165 8.1967 8.18165 7.66627C8.18165 7.13584 7.96944 6.62713 7.59168 6.25206C7.21393 5.87699 6.70159 5.66627 6.16737 5.66627C5.63315 5.66627 5.12081 5.87699 4.74305 6.25206C4.3653 6.62713 4.15308 7.13584 4.15308 7.66627C4.15308 8.1967 4.3653 8.70541 4.74305 9.08049C5.12081 9.45556 5.63315 9.66627 6.16737 9.66627Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_302_2933">
+                  <rect x="0.0786133" width="16.1143" height="16" rx="8" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="Alamat" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Profinsi <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_302_2933)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.5392 0.753129C11.7464 -0.184014 13.0896 -0.189729 13.3048 0.745129L13.3141 0.788557L13.3336 0.871986C13.4494 1.36209 13.7077 1.80758 14.0765 2.15303C14.4453 2.49847 14.9083 2.72862 15.4078 2.81484C16.393 2.98399 16.393 4.38856 15.4078 4.55884C14.9057 4.64551 14.4406 4.87758 14.0709 5.2259C13.7013 5.57422 13.4436 6.02325 13.3302 6.51656L13.3048 6.62741C13.0896 7.56227 11.7464 7.55656 11.5392 6.61941L11.5185 6.52456C11.4093 6.02936 11.1541 5.57768 10.7852 5.22716C10.4164 4.87664 9.9508 4.64318 9.44778 4.55656C8.46481 4.38741 8.46481 2.98513 9.44778 2.81599C9.94917 2.72959 10.4134 2.49729 10.7817 2.14855C11.1499 1.7998 11.4056 1.35033 11.5162 0.857129L11.5311 0.788557L11.5392 0.751986V0.753129ZM9.25095 5.68913C7.35177 5.36113 7.04675 3.03427 8.33819 2.06627C7.42269 1.71636 6.43515 1.59302 5.46089 1.70689C4.48662 1.82077 3.55493 2.16844 2.74629 2.71988C1.93764 3.27131 1.27637 4.00993 0.819584 4.87193C0.362799 5.73393 0.124239 6.69338 0.124512 7.66741C0.124512 9.71084 1.22143 11.7646 2.44612 13.2754C3.00594 13.976 3.64861 14.6072 4.36027 15.1554C4.67219 15.3874 4.98182 15.5817 5.27303 15.7188C5.55733 15.8526 5.86695 15.9531 6.16737 15.9531C6.46894 15.9531 6.77856 15.8526 7.06286 15.7188C7.35407 15.5817 7.6637 15.3874 7.97447 15.1554C8.68678 14.6076 9.32987 13.9763 9.88977 13.2754C10.9568 11.9588 11.9259 10.232 12.1573 8.45827C11.7328 8.41275 11.3341 8.23356 11.0195 7.94691C10.7049 7.66026 10.4909 7.28118 10.4089 6.86513L10.3882 6.77027C10.3281 6.49833 10.1879 6.2503 9.98536 6.05776C9.78284 5.86522 9.52718 5.7369 9.25095 5.68913ZM6.16737 9.66627C6.70159 9.66627 7.21393 9.45556 7.59168 9.08049C7.96944 8.70541 8.18165 8.1967 8.18165 7.66627C8.18165 7.13584 7.96944 6.62713 7.59168 6.25206C7.21393 5.87699 6.70159 5.66627 6.16737 5.66627C5.63315 5.66627 5.12081 5.87699 4.74305 6.25206C4.3653 6.62713 4.15308 7.13584 4.15308 7.66627C4.15308 8.1967 4.3653 8.70541 4.74305 9.08049C5.12081 9.45556 5.63315 9.66627 6.16737 9.66627Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_302_2933">
+                  <rect x="0.0786133" width="16.1143" height="16" rx="8" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="Provisi" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Kota/Kab <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_302_2933)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.5392 0.753129C11.7464 -0.184014 13.0896 -0.189729 13.3048 0.745129L13.3141 0.788557L13.3336 0.871986C13.4494 1.36209 13.7077 1.80758 14.0765 2.15303C14.4453 2.49847 14.9083 2.72862 15.4078 2.81484C16.393 2.98399 16.393 4.38856 15.4078 4.55884C14.9057 4.64551 14.4406 4.87758 14.0709 5.2259C13.7013 5.57422 13.4436 6.02325 13.3302 6.51656L13.3048 6.62741C13.0896 7.56227 11.7464 7.55656 11.5392 6.61941L11.5185 6.52456C11.4093 6.02936 11.1541 5.57768 10.7852 5.22716C10.4164 4.87664 9.9508 4.64318 9.44778 4.55656C8.46481 4.38741 8.46481 2.98513 9.44778 2.81599C9.94917 2.72959 10.4134 2.49729 10.7817 2.14855C11.1499 1.7998 11.4056 1.35033 11.5162 0.857129L11.5311 0.788557L11.5392 0.751986V0.753129ZM9.25095 5.68913C7.35177 5.36113 7.04675 3.03427 8.33819 2.06627C7.42269 1.71636 6.43515 1.59302 5.46089 1.70689C4.48662 1.82077 3.55493 2.16844 2.74629 2.71988C1.93764 3.27131 1.27637 4.00993 0.819584 4.87193C0.362799 5.73393 0.124239 6.69338 0.124512 7.66741C0.124512 9.71084 1.22143 11.7646 2.44612 13.2754C3.00594 13.976 3.64861 14.6072 4.36027 15.1554C4.67219 15.3874 4.98182 15.5817 5.27303 15.7188C5.55733 15.8526 5.86695 15.9531 6.16737 15.9531C6.46894 15.9531 6.77856 15.8526 7.06286 15.7188C7.35407 15.5817 7.6637 15.3874 7.97447 15.1554C8.68678 14.6076 9.32987 13.9763 9.88977 13.2754C10.9568 11.9588 11.9259 10.232 12.1573 8.45827C11.7328 8.41275 11.3341 8.23356 11.0195 7.94691C10.7049 7.66026 10.4909 7.28118 10.4089 6.86513L10.3882 6.77027C10.3281 6.49833 10.1879 6.2503 9.98536 6.05776C9.78284 5.86522 9.52718 5.7369 9.25095 5.68913ZM6.16737 9.66627C6.70159 9.66627 7.21393 9.45556 7.59168 9.08049C7.96944 8.70541 8.18165 8.1967 8.18165 7.66627C8.18165 7.13584 7.96944 6.62713 7.59168 6.25206C7.21393 5.87699 6.70159 5.66627 6.16737 5.66627C5.63315 5.66627 5.12081 5.87699 4.74305 6.25206C4.3653 6.62713 4.15308 7.13584 4.15308 7.66627C4.15308 8.1967 4.3653 8.70541 4.74305 9.08049C5.12081 9.45556 5.63315 9.66627 6.16737 9.66627Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_302_2933">
+                  <rect x="0.0786133" width="16.1143" height="16" rx="8" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="Kota/Kab" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Telepon <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_302_2997)">
+                <path
+                  d="M6.02934 15.1315C5.29217 15.6042 4.41349 15.8104 3.54119 15.7152C2.66888 15.6201 1.85621 15.2295 1.23994 14.6092L0.701266 14.0858C0.465188 13.846 0.333008 13.524 0.333008 13.1886C0.333008 12.8533 0.465188 12.5313 0.701266 12.2915L2.98719 10.0446C3.22676 9.81095 3.54916 9.68001 3.88499 9.68001C4.22082 9.68001 4.54322 9.81095 4.78278 10.0446C5.02435 10.2794 5.34891 10.4108 5.68691 10.4108C6.02492 10.4108 6.34948 10.2794 6.59104 10.0446L10.1822 6.47892C10.302 6.36164 10.3972 6.22188 10.4621 6.06777C10.5271 5.91365 10.5605 5.74826 10.5605 5.5812C10.5605 5.41414 10.5271 5.24875 10.4621 5.09464C10.3972 4.94053 10.302 4.80077 10.1822 4.68349C9.94687 4.44562 9.815 4.12551 9.815 3.79206C9.815 3.45861 9.94687 3.1385 10.1822 2.90063L12.4589 0.640061C12.7004 0.405657 13.0248 0.274414 13.3625 0.274414C13.7002 0.274414 14.0245 0.405657 14.266 0.640061L14.7932 1.17492C15.4177 1.78671 15.8109 2.59331 15.9069 3.45913C16.0029 4.32494 15.7958 5.19717 15.3204 5.9292C12.842 9.55627 9.68846 12.6797 6.02934 15.1315Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_302_2997">
+                  <rect x="0.0786133" width="16.1143" height="16" rx="8" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="08544655549" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Email <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M9.86373 8.77086L4.426 5.5386L5.17947 4.85901L9.86373 7.64328L14.5464 4.85901L15.3007 5.53801L9.86373 8.77086ZM1.45996 12.8536H18.2037V1.77026H1.45996V12.8536Z"
+                fill="#101010" />
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="pabloeskobar666@gmail.con" />
+        </div>
+      </form>
+    </div>
+    <div>
+      <h1 class="text-[10px] font-bold pt-[18px] pl-[21px]">DATA ORANG TUA</h1>
+      <div class="h-[1px] w-[280px] ml bg-[#A5A1A1] opacity-25 ml-[20px] mt-[6px]"></div>
+      <form class="max-w-sm mx-auto mt-[20px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Nama Ayah <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17.8989 9.03125L19.2833 10.5294L12.8259 17.5312L9.39444 13.8125L10.7789 12.3144L12.8259 14.5244L17.8989 9.03125ZM6.92222 13.8125L9.88889 17H0V14.875C0 12.5269 3.54022 10.625 7.91111 10.625L9.78011 10.7419L6.92222 13.8125ZM7.91111 0C8.96019 0 9.9663 0.447766 10.7081 1.2448C11.4499 2.04183 11.8667 3.12283 11.8667 4.25C11.8667 5.37717 11.4499 6.45817 10.7081 7.2552C9.9663 8.05223 8.96019 8.5 7.91111 8.5C6.86203 8.5 5.85592 8.05223 5.11411 7.2552C4.3723 6.45817 3.95556 5.37717 3.95556 4.25C3.95556 3.12283 4.3723 2.04183 5.11411 1.2448C5.85592 0.447766 6.86203 0 7.91111 0Z"
+                fill="#101010" />
+            </svg>
+
+            <path
+              d="M16 12C16 11.4696 16.2107 10.9609 16.5858 10.5858C16.9609 10.2107 17.4696 10 18 10C18.5304 10 19.0391 10.2107 19.4142 10.5858C19.7893 10.9609 20 11.4696 20 12C20 12.5304 19.7893 13.0391 19.4142 13.4142C19.0391 13.7893 18.5304 14 18 14C17.4696 14 16.9609 13.7893 16.5858 13.4142C16.2107 13.0391 16 12.5304 16 12ZM10 12C10 11.4696 10.2107 10.9609 10.5858 10.5858C10.9609 10.2107 11.4696 10 12 10C12.5304 10 13.0391 10.2107 13.4142 10.5858C13.7893 10.9609 14 11.4696 14 12C14 12.5304 13.7893 13.0391 13.4142 13.4142C13.0391 13.7893 12.5304 14 12 14C11.4696 14 10.9609 13.7893 10.5858 13.4142C10.2107 13.0391 10 12.5304 10 12ZM4 12C4 11.4696 4.21071 10.9609 4.58579 10.5858C4.96086 10.2107 5.46957 10 6 10C6.53043 10 7.03914 10.2107 7.41421 10.5858C7.78929 10.9609 8 11.4696 8 12C8 12.5304 7.78929 13.0391 7.41421 13.4142C7.03914 13.7893 6.53043 14 6 14C5.46957 14 4.96086 13.7893 4.58579 13.4142C4.21071 13.0391 4 12.5304 4 12Z"
+              fill="black" />
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="Nama Ayah" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">NIK Ayah <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_302_2892)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.786621 3.87772C0.786621 3.57462 0.907029 3.28393 1.12136 3.0696C1.33568 2.85527 1.62637 2.73486 1.92948 2.73486H15.6438C15.9469 2.73486 16.2376 2.85527 16.4519 3.0696C16.6662 3.28393 16.7866 3.57462 16.7866 3.87772V13.0206C16.7866 13.3237 16.6662 13.6144 16.4519 13.8287C16.2376 14.043 15.9469 14.1634 15.6438 14.1634H1.92948C1.62637 14.1634 1.33568 14.043 1.12136 13.8287C0.907029 13.6144 0.786621 13.3237 0.786621 13.0206V3.87772ZM7.64376 6.73486C7.64376 7.18952 7.46315 7.62556 7.14166 7.94705C6.82017 8.26854 6.38414 8.44915 5.92948 8.44915C5.47482 8.44915 5.03879 8.26854 4.7173 7.94705C4.3958 7.62556 4.21519 7.18952 4.21519 6.73486C4.21519 6.28021 4.3958 5.84417 4.7173 5.52268C5.03879 5.20119 5.47482 5.02058 5.92948 5.02058C6.38414 5.02058 6.82017 5.20119 7.14166 5.52268C7.46315 5.84417 7.64376 6.28021 7.64376 6.73486ZM2.55462 11.08C2.98251 10.6106 3.50373 10.2358 4.08489 9.97956C4.66605 9.72333 5.29434 9.59132 5.92948 9.59201C6.56462 9.59132 7.1929 9.72333 7.77407 9.97956C8.35523 10.2358 8.87645 10.6106 9.30434 11.08C9.60148 11.4046 9.33862 11.8777 8.89862 11.8777H2.96034C2.52034 11.8777 2.25748 11.4046 2.55462 11.08ZM10.9295 6.73486C10.9295 6.34058 11.2495 6.02058 11.6438 6.02058H13.9295C14.1189 6.02058 14.3006 6.09583 14.4346 6.22979C14.5685 6.36374 14.6438 6.54542 14.6438 6.73486C14.6438 6.9243 14.5685 7.10599 14.4346 7.23994C14.3006 7.37389 14.1189 7.44915 13.9295 7.44915H11.6438C11.4543 7.44915 11.2726 7.37389 11.1387 7.23994C11.0047 7.10599 10.9295 6.9243 10.9295 6.73486ZM11.6438 9.44915C11.4543 9.44915 11.2726 9.5244 11.1387 9.65836C11.0047 9.79231 10.9295 9.97399 10.9295 10.1634C10.9295 10.3529 11.0047 10.5346 11.1387 10.6685C11.2726 10.8025 11.4543 10.8777 11.6438 10.8777H13.9295C14.1189 10.8777 14.3006 10.8025 14.4346 10.6685C14.5685 10.5346 14.6438 10.3529 14.6438 10.1634C14.6438 9.97399 14.5685 9.79231 14.4346 9.65836C14.3006 9.5244 14.1189 9.44915 13.9295 9.44915H11.6438Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_302_2892">
+                  <rect width="16" height="16" fill="white" transform="translate(0.786621 0.449097)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="NIK Ayah" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Pekerjaan Ayah <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_302_3042)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M4.12135 5.29506C4.73188 5.29506 5.31742 5.06201 5.74913 4.64718C6.18085 4.23236 6.42339 3.66973 6.42339 3.08308C6.42339 2.49642 6.18085 1.9338 5.74913 1.51897C5.31742 1.10414 4.73188 0.871094 4.12135 0.871094C3.51081 0.871094 2.92527 1.10414 2.49356 1.51897C2.06184 1.9338 1.8193 2.49642 1.8193 3.08308C1.8193 3.66973 2.06184 4.23236 2.49356 4.64718C2.92527 5.06201 3.51081 5.29506 4.12135 5.29506ZM6.47518 11.931V11.8978C6.47518 10.8029 7.10479 9.84953 8.03481 9.35183C7.801 8.43223 7.22459 7.62683 6.4146 7.08795C5.6046 6.54908 4.61718 6.31408 3.63907 6.4274C2.66097 6.54073 1.75998 6.99452 1.10651 7.70296C0.453045 8.4114 0.0923969 9.32537 0.0927737 10.272V11.378C0.0927737 11.5247 0.153408 11.6653 0.261337 11.769C0.369266 11.8727 0.515649 11.931 0.668284 11.931H1.8193L2.33151 15.8705C2.3489 16.0043 2.41651 16.1273 2.52163 16.2165C2.62676 16.3057 2.76217 16.3549 2.90241 16.355H5.34143C5.48168 16.3549 5.61708 16.3057 5.72221 16.2165C5.82733 16.1273 5.89494 16.0043 5.91233 15.8705L6.42339 11.931H6.47518ZM11.519 9.37284C11.4812 9.37284 11.4437 9.38 11.4088 9.39389C11.3739 9.40779 11.3422 9.42815 11.3155 9.45383C11.2888 9.4795 11.2676 9.50998 11.2531 9.54353C11.2386 9.57708 11.2312 9.61303 11.2312 9.64934V10.3693H12.8576V9.65045C12.8576 9.57712 12.8273 9.50679 12.7733 9.45494C12.7193 9.40308 12.6462 9.37395 12.5698 9.37395H11.519V9.37284ZM9.50467 9.64934V10.3693C8.62644 10.3693 7.91396 11.0551 7.91396 11.8989V14.8265C7.91396 15.6704 8.62644 16.355 9.50467 16.355H14.583C15.4612 16.355 16.1737 15.6704 16.1737 14.8265V11.8978C16.1737 11.054 15.4623 10.3693 14.5841 10.3693V9.65045C14.5841 9.13713 14.3719 8.64483 13.9942 8.28185C13.6164 7.91888 13.1041 7.71496 12.5698 7.71496H11.519C10.9847 7.71496 10.4724 7.91888 10.0946 8.28185C9.71689 8.64483 9.50467 9.13713 9.50467 9.65045V9.64934Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_302_3042">
+                  <rect width="16.1143" height="15.4839" fill="white" transform="translate(0.0927734 0.871094)" />
+                </clipPath>
+              </defs>
+            </svg>
+
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="Pekerjaan Ayah" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Telepon Ayah <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_302_2997)">
+                <path
+                  d="M6.02934 15.1315C5.29217 15.6042 4.41349 15.8104 3.54119 15.7152C2.66888 15.6201 1.85621 15.2295 1.23994 14.6092L0.701266 14.0858C0.465188 13.846 0.333008 13.524 0.333008 13.1886C0.333008 12.8533 0.465188 12.5313 0.701266 12.2915L2.98719 10.0446C3.22676 9.81095 3.54916 9.68001 3.88499 9.68001C4.22082 9.68001 4.54322 9.81095 4.78278 10.0446C5.02435 10.2794 5.34891 10.4108 5.68691 10.4108C6.02492 10.4108 6.34948 10.2794 6.59104 10.0446L10.1822 6.47892C10.302 6.36164 10.3972 6.22188 10.4621 6.06777C10.5271 5.91365 10.5605 5.74826 10.5605 5.5812C10.5605 5.41414 10.5271 5.24875 10.4621 5.09464C10.3972 4.94053 10.302 4.80077 10.1822 4.68349C9.94687 4.44562 9.815 4.12551 9.815 3.79206C9.815 3.45861 9.94687 3.1385 10.1822 2.90063L12.4589 0.640061C12.7004 0.405657 13.0248 0.274414 13.3625 0.274414C13.7002 0.274414 14.0245 0.405657 14.266 0.640061L14.7932 1.17492C15.4177 1.78671 15.8109 2.59331 15.9069 3.45913C16.0029 4.32494 15.7958 5.19717 15.3204 5.9292C12.842 9.55627 9.68846 12.6797 6.02934 15.1315Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_302_2997">
+                  <rect x="0.0786133" width="16.1143" height="16" rx="8" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="Telepon Ibu" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Alamat Ibu <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_302_2933)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.5392 0.753129C11.7464 -0.184014 13.0896 -0.189729 13.3048 0.745129L13.3141 0.788557L13.3336 0.871986C13.4494 1.36209 13.7077 1.80758 14.0765 2.15303C14.4453 2.49847 14.9083 2.72862 15.4078 2.81484C16.393 2.98399 16.393 4.38856 15.4078 4.55884C14.9057 4.64551 14.4406 4.87758 14.0709 5.2259C13.7013 5.57422 13.4436 6.02325 13.3302 6.51656L13.3048 6.62741C13.0896 7.56227 11.7464 7.55656 11.5392 6.61941L11.5185 6.52456C11.4093 6.02936 11.1541 5.57768 10.7852 5.22716C10.4164 4.87664 9.9508 4.64318 9.44778 4.55656C8.46481 4.38741 8.46481 2.98513 9.44778 2.81599C9.94917 2.72959 10.4134 2.49729 10.7817 2.14855C11.1499 1.7998 11.4056 1.35033 11.5162 0.857129L11.5311 0.788557L11.5392 0.751986V0.753129ZM9.25095 5.68913C7.35177 5.36113 7.04675 3.03427 8.33819 2.06627C7.42269 1.71636 6.43515 1.59302 5.46089 1.70689C4.48662 1.82077 3.55493 2.16844 2.74629 2.71988C1.93764 3.27131 1.27637 4.00993 0.819584 4.87193C0.362799 5.73393 0.124239 6.69338 0.124512 7.66741C0.124512 9.71084 1.22143 11.7646 2.44612 13.2754C3.00594 13.976 3.64861 14.6072 4.36027 15.1554C4.67219 15.3874 4.98182 15.5817 5.27303 15.7188C5.55733 15.8526 5.86695 15.9531 6.16737 15.9531C6.46894 15.9531 6.77856 15.8526 7.06286 15.7188C7.35407 15.5817 7.6637 15.3874 7.97447 15.1554C8.68678 14.6076 9.32987 13.9763 9.88977 13.2754C10.9568 11.9588 11.9259 10.232 12.1573 8.45827C11.7328 8.41275 11.3341 8.23356 11.0195 7.94691C10.7049 7.66026 10.4909 7.28118 10.4089 6.86513L10.3882 6.77027C10.3281 6.49833 10.1879 6.2503 9.98536 6.05776C9.78284 5.86522 9.52718 5.7369 9.25095 5.68913ZM6.16737 9.66627C6.70159 9.66627 7.21393 9.45556 7.59168 9.08049C7.96944 8.70541 8.18165 8.1967 8.18165 7.66627C8.18165 7.13584 7.96944 6.62713 7.59168 6.25206C7.21393 5.87699 6.70159 5.66627 6.16737 5.66627C5.63315 5.66627 5.12081 5.87699 4.74305 6.25206C4.3653 6.62713 4.15308 7.13584 4.15308 7.66627C4.15308 8.1967 4.3653 8.70541 4.74305 9.08049C5.12081 9.45556 5.63315 9.66627 6.16737 9.66627Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_302_2933">
+                  <rect x="0.0786133" width="16.1143" height="16" rx="8" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="Alamat Ayah" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Usia Ayah <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_302_2944)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.25821 1.14286C5.25821 0.839753 5.13694 0.549062 4.92108 0.334735C4.70522 0.120408 4.41245 0 4.10718 0C3.80192 0 3.50915 0.120408 3.29329 0.334735C3.07743 0.549062 2.95616 0.839753 2.95616 1.14286V2.28571H1.80514C1.34724 2.28571 0.90809 2.46633 0.584302 2.78782C0.260515 3.10931 0.0786133 3.54534 0.0786133 4L0.0786133 5.71429H16.1929V4C16.1929 3.54534 16.011 3.10931 15.6872 2.78782C15.3634 2.46633 14.9243 2.28571 14.4664 2.28571H13.3153V1.14286C13.3153 0.839753 13.1941 0.549062 12.9782 0.334735C12.7624 0.120408 12.4696 0 12.1643 0C11.8591 0 11.5663 0.120408 11.3504 0.334735C11.1346 0.549062 11.0133 0.839753 11.0133 1.14286V2.28571H5.25821V1.14286ZM16.1929 7.14286H0.0786133V14.2857C0.0786133 14.7404 0.260515 15.1764 0.584302 15.4979C0.90809 15.8194 1.34724 16 1.80514 16H14.4664C14.9243 16 15.3634 15.8194 15.6872 15.4979C16.011 15.1764 16.1929 14.7404 16.1929 14.2857V7.14286Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_302_2944">
+                  <rect x="0.0786133" width="16.1143" height="16" rx="8" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="Usia Ayah" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[20px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Nama Ibu <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17.8989 9.03125L19.2833 10.5294L12.8259 17.5312L9.39444 13.8125L10.7789 12.3144L12.8259 14.5244L17.8989 9.03125ZM6.92222 13.8125L9.88889 17H0V14.875C0 12.5269 3.54022 10.625 7.91111 10.625L9.78011 10.7419L6.92222 13.8125ZM7.91111 0C8.96019 0 9.9663 0.447766 10.7081 1.2448C11.4499 2.04183 11.8667 3.12283 11.8667 4.25C11.8667 5.37717 11.4499 6.45817 10.7081 7.2552C9.9663 8.05223 8.96019 8.5 7.91111 8.5C6.86203 8.5 5.85592 8.05223 5.11411 7.2552C4.3723 6.45817 3.95556 5.37717 3.95556 4.25C3.95556 3.12283 4.3723 2.04183 5.11411 1.2448C5.85592 0.447766 6.86203 0 7.91111 0Z"
+                fill="#101010" />
+            </svg>
+
+            <path
+              d="M16 12C16 11.4696 16.2107 10.9609 16.5858 10.5858C16.9609 10.2107 17.4696 10 18 10C18.5304 10 19.0391 10.2107 19.4142 10.5858C19.7893 10.9609 20 11.4696 20 12C20 12.5304 19.7893 13.0391 19.4142 13.4142C19.0391 13.7893 18.5304 14 18 14C17.4696 14 16.9609 13.7893 16.5858 13.4142C16.2107 13.0391 16 12.5304 16 12ZM10 12C10 11.4696 10.2107 10.9609 10.5858 10.5858C10.9609 10.2107 11.4696 10 12 10C12.5304 10 13.0391 10.2107 13.4142 10.5858C13.7893 10.9609 14 11.4696 14 12C14 12.5304 13.7893 13.0391 13.4142 13.4142C13.0391 13.7893 12.5304 14 12 14C11.4696 14 10.9609 13.7893 10.5858 13.4142C10.2107 13.0391 10 12.5304 10 12ZM4 12C4 11.4696 4.21071 10.9609 4.58579 10.5858C4.96086 10.2107 5.46957 10 6 10C6.53043 10 7.03914 10.2107 7.41421 10.5858C7.78929 10.9609 8 11.4696 8 12C8 12.5304 7.78929 13.0391 7.41421 13.4142C7.03914 13.7893 6.53043 14 6 14C5.46957 14 4.96086 13.7893 4.58579 13.4142C4.21071 13.0391 4 12.5304 4 12Z"
+              fill="black" />
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="Nama Ibu" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">NIK Ibu <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_302_2892)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.786621 3.87772C0.786621 3.57462 0.907029 3.28393 1.12136 3.0696C1.33568 2.85527 1.62637 2.73486 1.92948 2.73486H15.6438C15.9469 2.73486 16.2376 2.85527 16.4519 3.0696C16.6662 3.28393 16.7866 3.57462 16.7866 3.87772V13.0206C16.7866 13.3237 16.6662 13.6144 16.4519 13.8287C16.2376 14.043 15.9469 14.1634 15.6438 14.1634H1.92948C1.62637 14.1634 1.33568 14.043 1.12136 13.8287C0.907029 13.6144 0.786621 13.3237 0.786621 13.0206V3.87772ZM7.64376 6.73486C7.64376 7.18952 7.46315 7.62556 7.14166 7.94705C6.82017 8.26854 6.38414 8.44915 5.92948 8.44915C5.47482 8.44915 5.03879 8.26854 4.7173 7.94705C4.3958 7.62556 4.21519 7.18952 4.21519 6.73486C4.21519 6.28021 4.3958 5.84417 4.7173 5.52268C5.03879 5.20119 5.47482 5.02058 5.92948 5.02058C6.38414 5.02058 6.82017 5.20119 7.14166 5.52268C7.46315 5.84417 7.64376 6.28021 7.64376 6.73486ZM2.55462 11.08C2.98251 10.6106 3.50373 10.2358 4.08489 9.97956C4.66605 9.72333 5.29434 9.59132 5.92948 9.59201C6.56462 9.59132 7.1929 9.72333 7.77407 9.97956C8.35523 10.2358 8.87645 10.6106 9.30434 11.08C9.60148 11.4046 9.33862 11.8777 8.89862 11.8777H2.96034C2.52034 11.8777 2.25748 11.4046 2.55462 11.08ZM10.9295 6.73486C10.9295 6.34058 11.2495 6.02058 11.6438 6.02058H13.9295C14.1189 6.02058 14.3006 6.09583 14.4346 6.22979C14.5685 6.36374 14.6438 6.54542 14.6438 6.73486C14.6438 6.9243 14.5685 7.10599 14.4346 7.23994C14.3006 7.37389 14.1189 7.44915 13.9295 7.44915H11.6438C11.4543 7.44915 11.2726 7.37389 11.1387 7.23994C11.0047 7.10599 10.9295 6.9243 10.9295 6.73486ZM11.6438 9.44915C11.4543 9.44915 11.2726 9.5244 11.1387 9.65836C11.0047 9.79231 10.9295 9.97399 10.9295 10.1634C10.9295 10.3529 11.0047 10.5346 11.1387 10.6685C11.2726 10.8025 11.4543 10.8777 11.6438 10.8777H13.9295C14.1189 10.8777 14.3006 10.8025 14.4346 10.6685C14.5685 10.5346 14.6438 10.3529 14.6438 10.1634C14.6438 9.97399 14.5685 9.79231 14.4346 9.65836C14.3006 9.5244 14.1189 9.44915 13.9295 9.44915H11.6438Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_302_2892">
+                  <rect width="16" height="16" fill="white" transform="translate(0.786621 0.449097)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="NIK Ibu" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Pekerjaan Ibu <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_302_3042)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M4.12135 5.29506C4.73188 5.29506 5.31742 5.06201 5.74913 4.64718C6.18085 4.23236 6.42339 3.66973 6.42339 3.08308C6.42339 2.49642 6.18085 1.9338 5.74913 1.51897C5.31742 1.10414 4.73188 0.871094 4.12135 0.871094C3.51081 0.871094 2.92527 1.10414 2.49356 1.51897C2.06184 1.9338 1.8193 2.49642 1.8193 3.08308C1.8193 3.66973 2.06184 4.23236 2.49356 4.64718C2.92527 5.06201 3.51081 5.29506 4.12135 5.29506ZM6.47518 11.931V11.8978C6.47518 10.8029 7.10479 9.84953 8.03481 9.35183C7.801 8.43223 7.22459 7.62683 6.4146 7.08795C5.6046 6.54908 4.61718 6.31408 3.63907 6.4274C2.66097 6.54073 1.75998 6.99452 1.10651 7.70296C0.453045 8.4114 0.0923969 9.32537 0.0927737 10.272V11.378C0.0927737 11.5247 0.153408 11.6653 0.261337 11.769C0.369266 11.8727 0.515649 11.931 0.668284 11.931H1.8193L2.33151 15.8705C2.3489 16.0043 2.41651 16.1273 2.52163 16.2165C2.62676 16.3057 2.76217 16.3549 2.90241 16.355H5.34143C5.48168 16.3549 5.61708 16.3057 5.72221 16.2165C5.82733 16.1273 5.89494 16.0043 5.91233 15.8705L6.42339 11.931H6.47518ZM11.519 9.37284C11.4812 9.37284 11.4437 9.38 11.4088 9.39389C11.3739 9.40779 11.3422 9.42815 11.3155 9.45383C11.2888 9.4795 11.2676 9.50998 11.2531 9.54353C11.2386 9.57708 11.2312 9.61303 11.2312 9.64934V10.3693H12.8576V9.65045C12.8576 9.57712 12.8273 9.50679 12.7733 9.45494C12.7193 9.40308 12.6462 9.37395 12.5698 9.37395H11.519V9.37284ZM9.50467 9.64934V10.3693C8.62644 10.3693 7.91396 11.0551 7.91396 11.8989V14.8265C7.91396 15.6704 8.62644 16.355 9.50467 16.355H14.583C15.4612 16.355 16.1737 15.6704 16.1737 14.8265V11.8978C16.1737 11.054 15.4623 10.3693 14.5841 10.3693V9.65045C14.5841 9.13713 14.3719 8.64483 13.9942 8.28185C13.6164 7.91888 13.1041 7.71496 12.5698 7.71496H11.519C10.9847 7.71496 10.4724 7.91888 10.0946 8.28185C9.71689 8.64483 9.50467 9.13713 9.50467 9.65045V9.64934Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_302_3042">
+                  <rect width="16.1143" height="15.4839" fill="white" transform="translate(0.0927734 0.871094)" />
+                </clipPath>
+              </defs>
+            </svg>
+
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="Pekerjaan Ibu" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Telepon Ibu <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_302_2997)">
+                <path
+                  d="M6.02934 15.1315C5.29217 15.6042 4.41349 15.8104 3.54119 15.7152C2.66888 15.6201 1.85621 15.2295 1.23994 14.6092L0.701266 14.0858C0.465188 13.846 0.333008 13.524 0.333008 13.1886C0.333008 12.8533 0.465188 12.5313 0.701266 12.2915L2.98719 10.0446C3.22676 9.81095 3.54916 9.68001 3.88499 9.68001C4.22082 9.68001 4.54322 9.81095 4.78278 10.0446C5.02435 10.2794 5.34891 10.4108 5.68691 10.4108C6.02492 10.4108 6.34948 10.2794 6.59104 10.0446L10.1822 6.47892C10.302 6.36164 10.3972 6.22188 10.4621 6.06777C10.5271 5.91365 10.5605 5.74826 10.5605 5.5812C10.5605 5.41414 10.5271 5.24875 10.4621 5.09464C10.3972 4.94053 10.302 4.80077 10.1822 4.68349C9.94687 4.44562 9.815 4.12551 9.815 3.79206C9.815 3.45861 9.94687 3.1385 10.1822 2.90063L12.4589 0.640061C12.7004 0.405657 13.0248 0.274414 13.3625 0.274414C13.7002 0.274414 14.0245 0.405657 14.266 0.640061L14.7932 1.17492C15.4177 1.78671 15.8109 2.59331 15.9069 3.45913C16.0029 4.32494 15.7958 5.19717 15.3204 5.9292C12.842 9.55627 9.68846 12.6797 6.02934 15.1315Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_302_2997">
+                  <rect x="0.0786133" width="16.1143" height="16" rx="8" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="Telepon Ibu" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Alamat Ibu <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_302_2933)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.5392 0.753129C11.7464 -0.184014 13.0896 -0.189729 13.3048 0.745129L13.3141 0.788557L13.3336 0.871986C13.4494 1.36209 13.7077 1.80758 14.0765 2.15303C14.4453 2.49847 14.9083 2.72862 15.4078 2.81484C16.393 2.98399 16.393 4.38856 15.4078 4.55884C14.9057 4.64551 14.4406 4.87758 14.0709 5.2259C13.7013 5.57422 13.4436 6.02325 13.3302 6.51656L13.3048 6.62741C13.0896 7.56227 11.7464 7.55656 11.5392 6.61941L11.5185 6.52456C11.4093 6.02936 11.1541 5.57768 10.7852 5.22716C10.4164 4.87664 9.9508 4.64318 9.44778 4.55656C8.46481 4.38741 8.46481 2.98513 9.44778 2.81599C9.94917 2.72959 10.4134 2.49729 10.7817 2.14855C11.1499 1.7998 11.4056 1.35033 11.5162 0.857129L11.5311 0.788557L11.5392 0.751986V0.753129ZM9.25095 5.68913C7.35177 5.36113 7.04675 3.03427 8.33819 2.06627C7.42269 1.71636 6.43515 1.59302 5.46089 1.70689C4.48662 1.82077 3.55493 2.16844 2.74629 2.71988C1.93764 3.27131 1.27637 4.00993 0.819584 4.87193C0.362799 5.73393 0.124239 6.69338 0.124512 7.66741C0.124512 9.71084 1.22143 11.7646 2.44612 13.2754C3.00594 13.976 3.64861 14.6072 4.36027 15.1554C4.67219 15.3874 4.98182 15.5817 5.27303 15.7188C5.55733 15.8526 5.86695 15.9531 6.16737 15.9531C6.46894 15.9531 6.77856 15.8526 7.06286 15.7188C7.35407 15.5817 7.6637 15.3874 7.97447 15.1554C8.68678 14.6076 9.32987 13.9763 9.88977 13.2754C10.9568 11.9588 11.9259 10.232 12.1573 8.45827C11.7328 8.41275 11.3341 8.23356 11.0195 7.94691C10.7049 7.66026 10.4909 7.28118 10.4089 6.86513L10.3882 6.77027C10.3281 6.49833 10.1879 6.2503 9.98536 6.05776C9.78284 5.86522 9.52718 5.7369 9.25095 5.68913ZM6.16737 9.66627C6.70159 9.66627 7.21393 9.45556 7.59168 9.08049C7.96944 8.70541 8.18165 8.1967 8.18165 7.66627C8.18165 7.13584 7.96944 6.62713 7.59168 6.25206C7.21393 5.87699 6.70159 5.66627 6.16737 5.66627C5.63315 5.66627 5.12081 5.87699 4.74305 6.25206C4.3653 6.62713 4.15308 7.13584 4.15308 7.66627C4.15308 8.1967 4.3653 8.70541 4.74305 9.08049C5.12081 9.45556 5.63315 9.66627 6.16737 9.66627Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_302_2933">
+                  <rect x="0.0786133" width="16.1143" height="16" rx="8" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="Alamat Ibu" />
+        </div>
+      </form>
+      <form class="max-w-sm mx-auto pb-[48px] mt-[8px]">
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]">Usia Ibu <span
+            class="text-[#FF5619]">*</span></label>
+        <div class="flex ml-[20px] mr-[20px]">
+          <span
+            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-l-full">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_302_2944)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.25821 1.14286C5.25821 0.839753 5.13694 0.549062 4.92108 0.334735C4.70522 0.120408 4.41245 0 4.10718 0C3.80192 0 3.50915 0.120408 3.29329 0.334735C3.07743 0.549062 2.95616 0.839753 2.95616 1.14286V2.28571H1.80514C1.34724 2.28571 0.90809 2.46633 0.584302 2.78782C0.260515 3.10931 0.0786133 3.54534 0.0786133 4L0.0786133 5.71429H16.1929V4C16.1929 3.54534 16.011 3.10931 15.6872 2.78782C15.3634 2.46633 14.9243 2.28571 14.4664 2.28571H13.3153V1.14286C13.3153 0.839753 13.1941 0.549062 12.9782 0.334735C12.7624 0.120408 12.4696 0 12.1643 0C11.8591 0 11.5663 0.120408 11.3504 0.334735C11.1346 0.549062 11.0133 0.839753 11.0133 1.14286V2.28571H5.25821V1.14286ZM16.1929 7.14286H0.0786133V14.2857C0.0786133 14.7404 0.260515 15.1764 0.584302 15.4979C0.90809 15.8194 1.34724 16 1.80514 16H14.4664C14.9243 16 15.3634 15.8194 15.6872 15.4979C16.011 15.1764 16.1929 14.7404 16.1929 14.2857V7.14286Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_302_2944">
+                  <rect x="0.0786133" width="16.1143" height="16" rx="8" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+          <input type="text" id="website-admin"
+            class="rounded-none rounded-r-full bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 h-[38px] w-[280px] text-sm p-2.5"
+            placeholder="Usia Ibu" />
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="w-[320px] py-5 bg-white rounded-[25px] shadow shadow-[#E0E3EB] mx-5 mt-7">
+    <h1 class="pl-5 text-[16px] font-semibold">unggah berkas</h1>
+    <h5 class="text-[12px] pl-5 pt-[18px]">Silahkan melengkapi berkas persyaratan
+      meliputi :
+      <li class="pl-2">Ijazah/SKL SMP</li>
+      <li class="pl-2">Pas foto</li>
+      <li class="pl-2">Kartu Keluarga</li>
+      <li class="pl-2">Akta Kelahiran</li>
+    </h5>
+    <div class=" mx-5 mt-5 pb-5 rounded-[25px] border-2">
+      <div class="pt-5 pl-5 "><svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <circle cx="15" cy="15" r="15" fill="#B3CFFF" />
+          <g clip-path="url(#clip0_1324_6704)">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12.9234 7.57129C13.3135 7.56199 13.695 7.68603 14.0051 7.92292C14.3151 8.1598 14.535 8.49535 14.6286 8.87414L14.8743 9.857H21.2857C21.7404 9.857 22.1764 10.0376 22.4979 10.3591C22.8194 10.6806 23 11.1166 23 11.5713V20.7141C23 21.1688 22.8194 21.6048 22.4979 21.9263C22.1764 22.2478 21.7404 22.4284 21.2857 22.4284H8.71429C8.48916 22.4284 8.26624 22.3841 8.05826 22.2979C7.85027 22.2118 7.66129 22.0855 7.5021 21.9263C7.34292 21.7671 7.21664 21.5782 7.13049 21.3702C7.04434 21.1622 7 20.9393 7 20.7141V9.28557C7 8.83092 7.18061 8.39488 7.5021 8.07339C7.82359 7.7519 8.25963 7.57129 8.71429 7.57129H12.9234ZM15 12.4284C15.2273 12.4284 15.4453 12.5187 15.6061 12.6795C15.7668 12.8402 15.8571 13.0582 15.8571 13.2856V15.2856H17.8571C18.0845 15.2856 18.3025 15.3759 18.4632 15.5366C18.624 15.6974 18.7143 15.9154 18.7143 16.1427C18.7143 16.37 18.624 16.5881 18.4632 16.7488C18.3025 16.9096 18.0845 16.9999 17.8571 16.9999H15.8571V18.9999C15.8571 19.2272 15.7668 19.4452 15.6061 19.606C15.4453 19.7667 15.2273 19.857 15 19.857C14.7727 19.857 14.5547 19.7667 14.3939 19.606C14.2332 19.4452 14.1429 19.2272 14.1429 18.9999V16.9999H12.1429C11.9155 16.9999 11.6975 16.9096 11.5368 16.7488C11.376 16.5881 11.2857 16.37 11.2857 16.1427C11.2857 15.9154 11.376 15.6974 11.5368 15.5366C11.6975 15.3759 11.9155 15.2856 12.1429 15.2856H14.1429V13.2856C14.1429 13.0582 14.2332 12.8402 14.3939 12.6795C14.5547 12.5187 14.7727 12.4284 15 12.4284Z"
+              fill="#1068FF" />
+          </g>
+          <defs>
+            <clipPath id="clip0_1324_6704">
+              <rect x="7" y="7" width="16" height="16" rx="8" fill="white" />
+            </clipPath>
+          </defs>
+        </svg></div>
+      <h1 class="text-[10px] pl-5 font-bold pt-[10px]">Upload a file</h1>
+      <h5 class="text-[8px] pl-5 font-medium">Attach the file below</h5>
+      <label class="pt-6 pl-5 block mb-2 text-sm font-medium text-gray-900" for="file_input">Upload file</label>
+      <input
+        class="block ml-5 w-60 text-sm text-gray-900 border border-gray-300 rounded-sm cursor-pointer bg-gray-50 focus:outline-none"
+        aria-describedby="file_input_help" id="file_input" type="file">
+      <p class="mt-1 bttext-[12px] pl-5 text-gray-500 dark:text-gray-300" id="file_input_help">PNG, JPG or PDF.</p>
+    </div>
+
+  </div>
+  <div class="bg-white my-7 py-7">
+    <h2 class=" text-[12px] text-center">Dengan menekan tombol <span class="text-[#51A8FF]">simpan</span> di <br> bawah ini, data yang anda cantumkan di <br> atas adalah benar dan dapat <br> dipertanggungjawabkan.</h2>
+  </div>
+  <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+</body>
+<script>
+  document
+    .getElementById("dropdownDefaultButton")
+    .addEventListener("click", function () {
+      var dropdown = document.getElementById("dropdown");
+      dropdown.classList.toggle("hidden");
+    });
+</script>
+
 </html>
