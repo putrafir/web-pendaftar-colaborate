@@ -10,6 +10,7 @@
   </head>
 
   <body bgcolor="EDF1FC">
+    <!-- dashboard -->
     <div
       class="rounded-b-[45px] bg-gradient-to-b from-[#0B65FF] to-[#5C97FF] pb-8"
     >
@@ -138,6 +139,7 @@
         </ul>
       </div>
     </div>
+    <!-- upload foto -->
     <div class="shadow py-4 shadow-[#E0E3EB] mx-5 bg-white rounded-[25px]">
       <h1 class="text-[16px] font-semibold pl-5">Ungah Foto</h1>
       <h5 class="text-[12px] pl-[20px] pt-[18px]">
@@ -146,7 +148,7 @@
         rapi, dan tampak wajah jelas.
       </h5>
 
-      <div class="w-full px-14 justify-center">
+      <div class="w-full px-14">
         <img class="border-2 rounded-2xl" src="../img/ppNone.png" alt="" />
         <label
           for="dropzone-file"
@@ -180,9 +182,8 @@
         </label>
       </div>
     </div>
-    <div
-      class="w-[320px] bg-white rounded-[25px] shadow shadow-[#E0E3EB] mx-5 mt-7"
-    >
+    <!-- data diri -->
+    <div class="bg-white rounded-[25px] shadow shadow-[#E0E3EB] mx-5 mt-7">
       <h1 class="text-[16px] font-semibold pt-5 pl-[21px]">Identitas Diri</h1>
       <h5 class="text-[12px] pl-[21px] pt-[18px]">
         Silahkan melengkapi data profil kalian sesuai <br />
@@ -191,9 +192,7 @@
       </h5>
       <div>
         <h1 class="text-[10px] font-bold pt-[22px] pl-[21px]">DATA DIRI</h1>
-        <div
-          class="h-[1px] w-[280px] ml bg-[#A5A1A1] opacity-25 ml-[20px] mt-[6px]"
-        ></div>
+        <div class="h-[1px] bg-[#A5A1A1] opacity-25 mx-5 mt-[6px]"></div>
         <form class="max-w-sm mx-auto mt-[20px]">
           <label
             for="website-admin"
@@ -305,7 +304,7 @@
           <label
             for="website-admin"
             class="block mb-2 text-sm font-medium text-gray-900 pl-[20px]"
-            >Panggilan <span class="text-[#FF5619]">*</span></label
+            >Nama Panggilan <span class="text-[#FF5619]">*</span></label
           >
           <div class="flex ml-[20px] mr-[20px]">
             <span
@@ -340,7 +339,7 @@
             id="gender"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm ml-5 rounded-full focus:ring-blue-500 focus:border-blue-500 block w-[282px] p-2.5"
           >
-            <option value="" selected>Pilih Jenis Kelamin</option>
+            <option value="" selected>--Pilih--</option>
             <option value="laki-laki">Laki-laki</option>
             <option value="perempuan">Perempuan</option>
           </select>
@@ -1202,9 +1201,8 @@
         </form>
       </div>
     </div>
-    <div
-      class="w-[320px] py-5 bg-white rounded-[25px] shadow shadow-[#E0E3EB] mx-5 mt-7"
-    >
+    <!-- upload berkas -->
+    <div class="py-5 bg-white rounded-[25px] shadow shadow-[#E0E3EB] mx-5 mt-7">
       <h1 class="pl-5 text-[16px] font-semibold">unggah berkas</h1>
       <h5 class="text-[12px] pl-5 pt-[18px]">
         Silahkan melengkapi berkas persyaratan meliputi :
@@ -1240,42 +1238,195 @@
         </div>
         <h1 class="text-[10px] pl-5 font-bold pt-[10px]">Upload a file</h1>
         <h5 class="text-[8px] pl-5 font-medium">Attach the file below</h5>
-        <label
-          class="pt-6 pl-5 block mb-2 text-sm font-medium text-gray-900"
-          for="file_input"
-          >Upload file</label
-        >
-        <input
-          class="block ml-5 w-60 text-sm text-gray-900 border border-gray-300 rounded-sm cursor-pointer bg-gray-50 focus:outline-none"
-          aria-describedby="file_input_help"
-          id="file_input"
-          type="file"
-        />
-        <p
-          class="mt-1 bttext-[12px] pl-5 text-gray-500 dark:text-gray-300"
-          id="file_input_help"
-        >
-          PNG, JPG or PDF.
-        </p>
+
+        <form class="max-w-lg mx-5 mt-2">
+          <label
+            class="block mb-2 text-[12px] text-opacity-80 font-bold"
+            for="user_avatar"
+            >Upload file Ijazah/SKL SMP</label
+          >
+          <input
+            class="block w-full text-sm border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
+            aria-describedby="user_avatar_help"
+            id="user_avatar"
+            type="file"
+          />
+          <div class="mt-1 text-sm text-gray-500" id="user_avatar_help">
+            PDF.
+          </div>
+        </form>
+        <form class="max-w-lg mx-5 mt-2">
+          <label
+            class="block mb-2 text-[12px] text-opacity-80 font-bold"
+            for="user_avatar"
+            >Upload file Pas foto</label
+          >
+          <input
+            class="block w-full text-sm border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
+            aria-describedby="user_avatar_help"
+            id="user_avatar"
+            type="file"
+          />
+          <div class="mt-1 text-sm text-gray-500" id="user_avatar_help">
+            PNG/JPG.
+          </div>
+        </form>
+        <form class="max-w-lg mx-5 mt-2">
+          <label
+            class="block mb-2 text-[12px] text-opacity-80 font-bold"
+            for="user_avatar"
+            >Upload file Kartu Keluarga</label
+          >
+          <input
+            class="block w-full text-sm border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
+            aria-describedby="user_avatar_help"
+            id="user_avatar"
+            type="file"
+          />
+          <div class="mt-1 text-sm text-gray-500" id="user_avatar_help">
+            PDF.
+          </div>
+        </form>
+        <form class="max-w-lg mx-5 mt-2">
+          <label
+            class="block mb-2 text-[12px] text-opacity-80 font-bold"
+            for="user_avatar"
+            >Upload file Akta Kelahiran</label
+          >
+          <input
+            class="block w-full text-sm border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
+            aria-describedby="user_avatar_help"
+            id="user_avatar"
+            type="file"
+          />
+          <div class="mt-1 text-sm text-gray-500" id="user_avatar_help">
+            PDF.
+          </div>
+        </form>
       </div>
     </div>
-    <div class="bg-white my-7 py-7">
-      <h2 class="text-[12px] text-center">
+    <!-- simpan -->
+    <div
+      class="bg-white rounded-[25px] shadow shadow-[#E0E3EB] mx-5 pb-5 mt-7 mb-10"
+    >
+      <h2 class="text-[12px] py-5 text-center">
         Dengan menekan tombol <span class="text-[#51A8FF]">simpan</span> di
         <br />
         bawah ini, data yang anda cantumkan di <br />
         atas adalah benar dan dapat <br />
         dipertanggungjawabkan.
       </h2>
+      <button
+        data-modal-target="popup-modal"
+        data-modal-toggle="popup-modal"
+        class="mx-auto py-2 px-5 flex items-center bg-blue-700 justify-center text-white rounded-full"
+      >
+        <span class="text-[16px] font-bold text-white">Simpan</span>
+      </button>
+
+      <!-- modal pop up -->
+      <div
+        id="popup-modal"
+        class="hidden fixed inset-0 z-50 items-center justify-center"
+      >
+        <div class="bg-black bg-opacity-50 absolute inset-0"></div>
+        <div class="relative p-4 w-full max-w-md max-h-full">
+          <div class="relative bg-white rounded-lg shadow">
+            <div class="p-4 md:p-5 text-center">
+              <svg
+                class="mx-auto mb-4"
+                width="96"
+                height="96"
+                viewBox="0 0 96 96"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M48 33.7143V56.9286M54.3574 5.49929C53.758 4.32927 52.8473 3.34737 51.7256 2.66173C50.604 1.97608 49.3148 1.61328 48.0003 1.61328C46.6856 1.61328 45.3965 1.97608 44.2748 2.66173C43.1532 3.34737 42.2425 4.32927 41.6431 5.49929L2.35736 84.0707C1.80943 85.1579 1.54856 86.3671 1.59952 87.5843C1.65048 88.8007 2.01158 89.9836 2.64853 91.0214C3.28547 92.0593 4.17712 92.9171 5.23882 93.5129C6.30046 94.1093 7.49689 94.4243 8.71454 94.4279H87.2858C88.5036 94.4243 89.7 94.1093 90.7615 93.5129C91.8236 92.9171 92.715 92.0593 93.3522 91.0214C93.9886 89.9836 94.35 88.8007 94.4008 87.5843C94.4522 86.3671 94.1908 85.1579 93.6429 84.0707L54.3574 5.49929ZM48 76.5714C47.0138 76.5714 46.2143 75.7721 46.2143 74.7857C46.2143 73.7993 47.0138 73 48 73C48.9862 73 49.7857 73.7993 49.7857 74.7857C49.7857 75.7721 48.9862 76.5714 48 76.5714Z"
+                  stroke="#FFB547"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3 class="mb-1 text-lg font-semibold dark:text-gray-400">
+                Apakah Anda Yakin?
+              </h3>
+              <h5 class="mb-5 text-gray-500">
+                Mengisi Data Diri Dengan Benar!
+              </h5>
+              <button
+                id="confirmButton"
+                data-modal-hide="popup-modal"
+                type="button"
+                class="text-white bg-[#65D32A] hover:bg-[rgb(71,134,38)] focus:ring-4 focus:outline-none focus:ring-[#62FE0E] font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center"
+              >
+                Ya
+              </button>
+              <button
+                id="cancelButton"
+                data-modal-hide="popup-modal"
+                type="button"
+                class="py-2.5 px-5 ms-3 text-sm font-medium text-white focus:outline-none bg-[#6E6C6C] rounded-lg hover:bg-[#3C3B3B] focus:z-10 focus:ring-4 focus:ring-[#929090]"
+              >
+                Batalkan
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modul konvifirmasi -->
+      <div
+        id="popup-modal-konfirmasi"
+        class="hidden fixed inset-0 z-50 items-center justify-center"
+      >
+        <div class="bg-black bg-opacity-50 absolute inset-0"></div>
+        <div class="relative p-4 w-full max-w-md max-h-full">
+          <div class="relative bg-white rounded-lg shadow">
+            <div class="p-4 md:p-5 text-center">
+              <svg
+                class="mx-auto mb-4"
+                width="97"
+                height="97"
+                viewBox="0 0 97 97"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M73.4286 2H23.4286C11.5939 2 2 11.5939 2 23.4286V73.4286C2 85.2636 11.5939 94.8571 23.4286 94.8571H73.4286C85.2636 94.8571 94.8571 85.2636 94.8571 73.4286V23.4286C94.8571 11.5939 85.2636 2 73.4286 2Z"
+                  stroke="#65D32A"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M69.2649 32.3569L40.6934 68.0712L26.4077 57.3569"
+                  stroke="#65D32A"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3 class="mb-1 text-lg font-semibold dark:text-gray-400">
+                Data Diri Tersimpan!
+              </h3>
+              <h5 class="mb-5 text-gray-500">Data Diri Anda Telah Direkap!</h5>
+              <button
+                id="confirmButton2"
+                data-modal-hide="popup-modal-konfirmasi"
+                type="button"
+                class="text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-400 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center"
+              >
+                ok
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <script src="../js/script.js"></script>
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-    <script>
-      document
-        .getElementById("dropdownDefaultButton")
-        .addEventListener("click", function () {
-          var dropdown = document.getElementById("dropdown");
-          dropdown.classList.toggle("hidden");
-        });
-    </script>
   </body>
 </html>
