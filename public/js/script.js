@@ -19,6 +19,26 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButtons = document.querySelectorAll("[data-modal-toggle-alert]");
+  const hideButtons = document.querySelectorAll("[data-modal-hide-alert]");
+  const modal = document.getElementById("popup-alert");
+
+  toggleButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      modal.classList.toggle("hidden");
+      modal.classList.toggle("flex");
+    });
+  });
+
+  hideButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    });
+  });
+});
+
 // nav button
 document
   .getElementById("dropdownDefaultButton")
