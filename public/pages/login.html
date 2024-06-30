@@ -23,17 +23,20 @@
     </script>
     <title>Login</title>
     <style type="text/tailwindcss">
-      * {
-        /* border: 1px solid red; */
-      }
     </style>
   </head>
   <!-- Tombol Masuk dan Daftar Awal -->
   <body>
     <header>
       <nav class="mt-5 flex justify-center space-x-14">
-          <a href="" class="hover:text-blue-400 font-semibold transition-all">Masuk</div>
-         <a href="./daftar.html" class="hover:text-blue-400 font-semibold transition-all">Daftar</div>
+        <a href="" class="hover:text-blue-400 font-semibold transition-all"
+          >Masuk</a
+        >
+        <a
+          href="./daftar.html"
+          class="hover:text-blue-400 font-semibold transition-all"
+          >Daftar</a
+        >
       </nav>
     </header>
     <!-- Tombol Masuk dan Daftar Akhir -->
@@ -48,7 +51,7 @@
         "
       ></div>
     </div>
-     <!-- Foto Profile Akhir -->
+    <!-- Foto Profile Akhir -->
 
     <!-- Tulisan Login Pendaftaran Awal -->
     <div class="mb-6 mt-4 mx-auto">
@@ -71,46 +74,89 @@
           required
         />
       </div>
-        <input
-          type="password"
-          id="password"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400"
-          required
-          placeholder="*****"
-        />
-        <a href="./halamanUtama.html">
-          <button
-            type="button"
-            class="mt-10 text-white rounded-3xl w-full p-2.5 font-semibold bg-blue-600 hover:bg-blue-950 transition-colors"
-          >
-            Login
-          </button>
-        </a>
-        <!-- Fitur memasukan email dan password Akhir -->
+      <input
+        type="password"
+        id="password"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400"
+        required
+        placeholder="*****"
+      />
+      <a href="./home.html">
+        <button
+          type="button"
+          class="mt-10 text-white rounded-3xl w-full p-2.5 font-semibold bg-blue-600 hover:bg-blue-950 transition-colors"
+        >
+          Login
+        </button>
+      </a>
+      <!-- Fitur memasukan email dan password Akhir -->
+      <div class="mt-8 max-w-sm mx-auto grid grid-cols-3 items-center">
+        <hr class="border-gray-400" />
+        <p class="text-center">Atau</p>
+        <hr class="border-gray-400" />
+      </div>
 
-        <div class="mt-8 max-w-sm mx-auto grid grid-cols-3 items-center">
-          <hr class="border-gray-400" />
-          <p class="text-center">Atau</p>
-          <hr class="border-gray-400" />
+      <!-- Fitur Lupa Kata Sandi Awal -->
+
+      <div class="max-w-sm mx-auto mt-8">
+        <button
+          data-modal-target="popup-modal"
+          data-modal-toggle="popup-modal"
+          class="text-black font-semibold bg-gray-200 rounded-3xl w-full p-2.5 hover:bg-slate-800 hover:text-white transition-colors"
+        >
+          <span class="text-[16px] font-bold">Lupa Kata Sandi</span>
+        </button>
+
+        <div
+          id="popup-modal"
+          class="hidden fixed inset-0 z-50 items-center justify-center"
+        >
+          <div class="bg-black bg-opacity-50 absolute inset-0"></div>
+          <div class="relative p-4 w-full max-w-md max-h-full">
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+              <div class="p-4 md:p-5 text-center">
+                <svg
+                  class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+                <h3 class="mb-5 text-lg font-normal text-stone-100">
+                  Silahkan Hubungi Admin!
+                </h3>
+                <form action="">
+                  <input type="text" class="hidden" value="jalur 1" />
+                  <button
+                    id="confirmButton"
+                    data-modal-hide="popup-modal"
+                    type="button"
+                    class="text-white bg-lime-400 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-200 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center"
+                  >
+                    Iya
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <!-- Fitur Lupa Kata Sandi Awal -->
-
-        <div class="max-w-sm mx-auto mt-8">
-          <button
-            type="button"
-            class="text-black font-semibold bg-gray-200 rounded-3xl w-full p-2.5 hover:bg-slate-800 hover:text-white transition-colors"
-          >
-            Lupa Kata Sandi
-          </button>
-          <p class="mt-9 text-center text-gray-400">
-            Supported by Yayasan Pendidikan Islam dan Sosial
-          </p>
-        </div>
-
-        <!-- Fitur Lupa Kata Sandi Akhir -->
+        <p class="mt-9 text-center text-gray-400">
+          Supported by Yayasan Pendidikan Islam dan Sosial
+        </p>
+        <h4 class="text-center mt-3 text-gray-400">
+          Kontak Admin :<a href=""> https://wa.me/62812345****</a>
+        </h4>
       </div>
     </form>
-    <footer></footer>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

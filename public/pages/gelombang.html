@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/output.css" />
   </head>
+
   <body bgcolor="EDF1FC">
     <div class="rounded-b-[45px] bg-gradient-to-b from-[#0B65FF] to-[#5C97FF]">
       <div class="pt-5 flex text-white">
@@ -19,11 +20,10 @@
           >/Informasi data pendaftar</p2
         >
       </div>
-
       <button
         id="dropdownDefaultButton"
         data-dropdown-toggle="dropdown"
-        class="text-white mt-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        class="text-white mt-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
         type="button"
       >
         <svg
@@ -45,15 +45,11 @@
 
         Menu Utama
       </button>
-
       <!-- Dropdown menu -->
       <div id="dropdown" class="z-10 hidden rounded-lg ml-5">
-        <ul
-          class="text-sm text-white dark:text-gray-200"
-          aria-labelledby="dropdownDefaultButton"
-        >
+        <ul class="text-sm text-white" aria-labelledby="dropdownDefaultButton">
           <li>
-            <a href="" class="flex py-1">
+            <a href="./gelombang.html" class="flex py-1">
               <svg
                 class="mt-1 me-1"
                 width="10"
@@ -67,14 +63,11 @@
                   fill="white"
                 />
               </svg>
-              <label
-                class="hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Dashboard</label
-              >
+              <label class="hover:bg-gray-100">Dashboard</label>
             </a>
           </li>
           <li>
-            <a href="" class="flex py-1">
+            <a href="./profil.html" class="flex py-1">
               <svg
                 class="mt-1 me-1"
                 width="10"
@@ -112,15 +105,11 @@
                   </clipPath>
                 </defs>
               </svg>
-
-              <label
-                class="hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Data identitas</label
-              >
+              <label class="hover:bg-gray-100">Data identitas</label>
             </a>
           </li>
           <li>
-            <a href="" class="flex py-i">
+            <a href="./pengumuman.html" class="flex py-1">
               <svg
                 class="mt-1 me-1"
                 width="10"
@@ -137,17 +126,12 @@
                 />
               </svg>
 
-              <label
-                class="hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Pengumuman</label
-              >
+              <label class="hover:bg-gray-100">Pengumuman</label>
             </a>
           </li>
         </ul>
       </div>
     </div>
-    <br />
-
     <!-- Informasi -->
     <div
       class="h-[180] w-[320px] shadow shadow-[#E0E3EB] mx-5 bg-white rounded-[25px]"
@@ -257,14 +241,14 @@
             >
               Apakah anda yakin ingin ingin memilih jalur ini?
             </h3>
-            <a href="./remia.html">
+            <a href="./inputDataDIri.html">
               <form action="">
                 <input type="text" class="hidden" value="jalur 1" />
                 <button
                   id="confirmButton"
                   data-modal-hide="popup-modal"
                   type="button"
-                  class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center"
+                  class="py-2.5 px-5 mx-3 text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center text-center"
                 >
                   Iya
                 </button>
@@ -274,7 +258,7 @@
               id="cancelButton"
               data-modal-hide="popup-modal"
               type="button"
-              class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              class="py-2.5 px-5 mx-3 mt-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
             >
               Batalkan
             </button>
