@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>halaman Utama</title>
+
+    <link rel="stylesheet" href="../css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body class="h-full w-full bg-blue-700">
+
+    <!-- Nav Awal -->
+    <div class="font-bold font-sans text-white text-[26px] mt-5 ml-5 flex justify-between items-center">
+        <p class="flex items-center">
+            <i data-feather="book"></i>
+    PPDB <span class="font-normal">APPS</span>
+        </p>
+    <a href="./login.html">
+        <i data-feather="arrow-right"></i>
+</a>
+    </div>
+    <!-- Nav Awal -->
+
+    <!-- card awal -->
+     <div class="h-[800px] w-full bg-gray-100 rounded-t-[38px] mt-10 ml">
+<div class="font-semibold text-[46px] ml-10 pt-10">
+    Forgot <br>Password
+
+    <!-- Gambar Png -->
+    <div class="">
+        <img src="/public/img/padlokk.png" alt="" class="w-56 mx-auto">
+    </div>
+    <!-- Gambar Png -->
+
+    <div class="text-lg font-bold flex justify-center items-center">Please Enter Your Email Address</div>
+    <div class="text-lg mt-10">
+        Email Address
+    </div>
+
+    <!-- Input Email -->
+    <form class="max-w-sm flex justify-center items-center">
+        <div class="mb-3">
+          <input
+            type="email"
+            id="email"
+            class="border-none rounded-3xl shadow-lg h-14 w-96"
+            placeholder="E-mail"
+            required
+          />
+        </div>
+    </div>
+    <!-- Input Email -->
+
+    <!-- Send Button -->
+    <div class="mx-24">
+        <a href=""
+        ><button
+          type="button"
+          class="flex justify-center items-center mt-24 w-48 py-4 px-36 font-semibold text-2xl bg-blue-600 rounded-3xl text-white bg-gradient-to-tr from-blue-600 to-blue-400 hover:to-blue-900 transition-colors"
+        >
+          Send
+        </button></a
+      >
+    </div>
+     </div>
+     <!-- Send Button -->
+
+    <!-- card akhir -->
+    <script>
+        feather.replace();
+      </script>
+  </body>
+</html>
