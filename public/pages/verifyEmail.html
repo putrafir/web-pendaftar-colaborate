@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Halaman Utama</title>
+
+  <link rel="stylesheet" href="../css/output.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="h-full w-full bg-blue-700">
+
+    <!-- Nav Awal -->
+    <div class="font-bold font-sans text-white text-[26px] mt-5 ml-5 flex justify-between items-center">
+        <p class="flex items-center">
+            <i data-feather="book"></i>
+    PPDB <span class="font-normal">APPS</span>
+        </p>
+    <a href="./resetPW.html">
+        <i data-feather="arrow-right"></i>
+</a>
+    </div>
+    <!-- Nav Awal -->
+
+    <!-- card awal -->
+     <div class="h-[900px] w-full bg-gray-100 rounded-t-[38px] mt-10 ml">
+<div class="font-semibold text-[46px] ml-10 pt-10">
+    Verify Your<br>Email
+
+    <!-- Gambar Png -->
+    <div class="">
+        <img src="/public/img/padlokk.png" alt="" class="w-56 mx-auto">
+    </div>
+    <!-- Gambar Png -->
+     
+      <div class="text-lg font-bold flex justify-center items-center mt-8">
+        Please Enter the 4-Digit Code Sent to Your Email
+      </div>
+
+      <!-- Kotak Input -->
+      <div class="flex justify-center mt-10">
+        <form id="verifyForm" class="flex space-x-3">
+          <input type="text" id="digit1" maxlength="1" class="border border-gray-300 rounded-lg h-14 w-14 text-center text-2xl" oninput="moveToNext(this, 'digit2')" required />
+          <input type="text" id="digit2" maxlength="1" class="border border-gray-300 rounded-lg h-14 w-14 text-center text-2xl" oninput="moveToNext(this, 'digit3')" required />
+          <input type="text" id="digit3" maxlength="1" class="border border-gray-300 rounded-lg h-14 w-14 text-center text-2xl" oninput="moveToNext(this, 'digit4')" required />
+          <input type="text" id="digit4" maxlength="1" class="border border-gray-300 rounded-lg h-14 w-14 text-center text-2xl" oninput="moveToNext(this, null)" required />
+        </form>
+      </div>
+      <!-- Kotak Input -->
+
+    <!-- Resend Code -->
+      <div class="flex justify-center items-center text-lg mt-10">
+        <button
+          type="button"
+          onclick="resendCode()"
+          class="text-blue-600 hover:underline"
+        >
+          Resend Code
+        </button>
+      </div>
+    <!-- Resend Code -->
+
+    <!-- Verify Button -->
+      <div class="flex justify-center items-center">
+        <button
+          type="button"
+          class="text-lg flex justify-center items-center mt-20 mb-4 w-48 py-4 px-36 bg-blue-600 rounded-3xl text-white bg-gradient-to-tr from-blue-600 to-blue-400 hover:to-blue-900 transition-colors"
+        >
+          Verify
+        </button>
+      </div>
+    <!-- Verify Button -->
+
+    </div>
+  </div>
+  <!-- Card Akhir -->
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
